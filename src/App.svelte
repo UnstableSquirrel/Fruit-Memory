@@ -231,7 +231,10 @@ function checkForPair() {
     function turn1() {
       let pos1 = arr.findIndex(i => i.Picked == "true")
       // @ts-ignore
-      let pos2 = arr.findLastIndex(i => i.Picked == "true")
+      // let pos2 = arr.findLastIndex(i => i.Picked == "true")
+      let a = arr.map((item) => item.Picked)
+      let pos2 = a.lastIndexOf("true")
+      // console.log(pos1, pos2)
 
       if (arr[pos1].Nr == arr[pos2].Nr) {
         pairsCount += 1
@@ -485,9 +488,9 @@ function rl() {
   }
 
   .modal-content > p > span {
-      color: #FFC75F;
+      color: #ffffff;
       font-weight: 700;
-      text-shadow: -1px -1px 0 #845EC2, 1px -1px 0 #845EC2, -1px 1px 0 #845EC2, 1px 1px 0 #845EC2;
+      text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000;
   }
 
   .modal-content > button {
